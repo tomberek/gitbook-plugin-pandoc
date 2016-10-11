@@ -1,0 +1,18 @@
+{
+  "name": "gitbook-plugin-pandoc",
+  "version": "1.0.0",
+  "description": "GitBook plugin for MCM",
+  "main": "index.js",
+  "engines": {
+      "gitbook": ">1.x.x"
+  },
+  "keywords": [
+    "Pandoc",
+    "MCM"
+  ],
+  "author": "Tom Bereknyei",
+  "gitbook": {
+      "properties": {
+      }
+  }
+}

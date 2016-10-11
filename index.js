@@ -1,4 +1,4 @@
-var pandoc = require("js-pandoc.js");
+var pandoc = require("./js-pandoc.js");
 module.exports = {
     blocks:{},
     filters:{},

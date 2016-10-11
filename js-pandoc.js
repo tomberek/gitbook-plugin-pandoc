@@ -30,8 +30,7 @@
  * @param text Markdown text
  * @return HTML
  */
-String.prototype.Pandoc = function(options = {}){
-	return Pandoc( this, options);
+String.prototype.Pandoc = function(options = {}){ return Pandoc( this, options);
 }
 
 Array.prototype.sum = function() {
@@ -51,14 +50,23 @@ Array.prototype.regexIndexOf = function (regex, startpos = 0) {
 	return -1;
 }
  
+pandoc=true;
+strict=true;
+html5=true;
+pan_xtables=false;
+md_extra=false;
+mdx_xtables=false;
+addcoordinates=false;
+debug=false;
+
 default_options = {
 	pandoc : true,
-	strict : false,
+	strict : true,
 	html5: true,   
-	pan_xtables: true,         
-	md_extra: true,   
-	mdx_xtables : true,   
-	addcoordinates: true,   
+	pan_xtables: false,         
+	md_extra: false,   
+	mdx_xtables : false,   
+	addcoordinates: false,   
 	debug: false,          
 };
  
@@ -3277,3 +3285,4 @@ function int2roman(number) {
         return text + "\n";
     }).call(this, text);
 }
+module.exports.Pandoc=Pandoc;

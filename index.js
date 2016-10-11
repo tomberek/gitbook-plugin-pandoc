@@ -5,6 +5,7 @@ module.exports = {
     hooks:{
         "page:before": function(page) {
             page.content = pandoc.Pandoc(page.content);
+            return page;
         }
     }
 }

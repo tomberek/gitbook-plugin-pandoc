@@ -1,18 +1,11 @@
-var pandoc = require("./js-pandoc.js");
-p = pandoc.Pandoc;
+var trans = require("./transformer.js");
 module.exports = {
     blocks:{},
     filters:{},
     hooks:{
         "page:before": function(page) {
-            debug=false;
-            pandoc=true;
-            options = {pandoc:true,debug:false};
-            window={}
-            console.groupEnd = function(){};
-            page.content = p(page.content,options);
+            page.content = js_toHTML(page.content);
             return page;
         }
     }
 }
-
